@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css 视差滚动</title>
+</head>
+<body>
+	<main class="main">
+		<section class="list-item">
+			<div class="item-image">
+				<img src="./hui.JPG" alt="">
+			</div>
+			<div class="item-text">
+				<div class="text-title">[路人女主的养成方法]</div>
+				<div class="text-desc">加藤惠天下第一</div>
+			</div>
+		</section>
+		<section class="list-item">
+			<div class="item-image">
+				<img src="./hui.JPG" alt="">
+			</div>
+			<div class="item-text">
+				<div class="text-title">[路人女主的养成方法]</div>
+				<div class="text-desc">加藤惠天下第一</div>
+			</div>
+		</section>
+		<section class="list-item">
+			<div class="item-image">
+				<img src="./hui.JPG" alt="">
+			</div>
+			<div class="item-text">
+				<div class="text-title">[路人女主的养成方法]</div>
+				<div class="text-desc">加藤惠天下第一</div>
+			</div>
+		</section>
+		<section class="list-item">
+			<div class="item-image">
+				<img src="./hui.JPG" alt="">
+			</div>
+			<div class="item-text">
+				<div class="text-title">[路人女主的养成方法]</div>
+				<div class="text-desc">加藤惠天下第一</div>
+			</div>
+		</section>
+		<section class="list-item">
+			<div class="item-image">
+				<img src="./hui.JPG" alt="">
+			</div>
+			<div class="item-text">
+				<div class="text-title">[路人女主的养成方法]</div>
+				<div class="text-desc">加藤惠天下第一</div>
+			</div>
+		</section>
+		<section class="list-item">
+			<div class="item-image">
+				<img src="./hui.JPG" alt="">
+			</div>
+			<div class="item-text">
+				<div class="text-title">[路人女主的养成方法]</div>
+				<div class="text-desc">加藤惠天下第一</div>
+			</div>
+		</section>
+	</main>
+</body>
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	html,body{
+		padding: 0;
+		margin: 0;
+	}
+	html{
+		overflow: hidden;
+	}	
+	body{
+		width: 100vw;
+		height: 100vh;
+		/* 定义 3D 元素距视图的距离*/
+		perspective: 100px; 
+		transform-style: preserve-3d;
+		overflow-y: auto;
+	}
+	.main{
+		display: flex;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+	}
+	.list-item{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 45vh;
+		overflow: hidden;
+	}
+	.list-item:hover .item-image::before{
+		background-color: rgba(0,0,0,.2);
+	}
+	.item-image{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		/*进行z轴的移动*/
+		transform: translateZ(-50px) scale(2.4);
+	}
+	.item-image::before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.4);
+		transition: all 0.3s ease;
+	}
+	.item-image img{
+		display: block;
+		width: 100%;
+		height: 100%;
+		/* 覆盖，保持原始的尺寸比例，保证内容区域被填满。*/
+		object-fit: cover;
+	}
+	.item-text{
+		color: #fff;
+		font-family: "Courier New",Courier,monospace;
+		text-align: center;
+	}
+	.text-title{
+		font-size: 2rem;
+		font-weight: bolder;
+		margin-bottom: 20px;
+	}
+	.text-desc{
+		font-size: 1.2rem;
+	}
+</style>
+</html>

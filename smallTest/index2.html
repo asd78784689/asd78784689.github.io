@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>八卦图实现</title>
+    <style type="text/css">
+        div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;/*令两个框能够并排放置*/
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid red;
+            border-bottom: 200px solid red;
+            border-radius: 50%;
+            transform-origin: 50% 50%;
+            /*animation-name: rotate;*/
+            /*animation-duration: 5s;*/
+            /*animation-timing-function: linear;*/
+            /*animation-iteration-count:infinite;*/
+            /*animation-fill-mode:forwards;*/
+            /*animation-play-state:paused;*/
+            animation:rotate 5s linear infinite forwards paused;
+        }
+        div:after{
+            content:'';
+            display:inline-block;
+            width:40px;
+            height:40px;
+            border:80px solid red;
+            border-radius:50%;
+            position:absolute;
+            top:100px;
+            background:#fff;
+            left:200px;
+        }
+        div:before{
+            content:'';
+            display:inline-block;
+            width:40px;
+            height:40px;
+            border:80px solid white;
+            border-radius:50%;
+            position:absolute;
+            top:100px;
+            background:red;
+            left:00px;
+        }
+        @keyframes rotate{
+            from{transform:rotate(0deg);}
+            to{transform:rotate(360deg);}
+        }
+        div:hover{cursor:pointer;animation-play-state:running;}
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

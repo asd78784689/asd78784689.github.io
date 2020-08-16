@@ -1,0 +1,31 @@
+{
+	"data": {
+		"arr": [{
+				"title": "JavaScript",
+				"class": "study-mid"
+			},
+			{
+				"title": "Vue",
+				"class": "study-large"
+			},
+			{
+				"title": "Nodejs",
+				"class": "study-small"
+			},
+			{
+				"title": "React",
+				"class": "study-mid"
+			},
+			{
+				"title": "小程序",
+				"class": "study-mid"
+			},
+			{
+				"title": "MongoDB",
+				"class": "study-small"
+			}
+		]
+	},
+	"code": 0,
+	"msg": "成功"
+}
